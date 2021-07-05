@@ -8,16 +8,17 @@ export default function CartList({carts, removeFromCart}) {
     const [ discount, setDiscount]= useState(null);
     const [total, setTotal]= useState(null);
 
-    const amountSummery=()=>{
-        carts.forEach((element)=>{
-            setPrice((prevPrice)=> prevPrice + element.price);
-            setDiscount((prevDiscount)=> prevDiscount + element.discount);
-            
-        });
-        setTotal(40 + price )
-    }
+ 
 
     useEffect(() => {
+        const amountSummery=()=>{
+            carts.forEach((element)=>{
+                setPrice((prevPrice)=> prevPrice + element.price);
+                setDiscount((prevDiscount)=> prevDiscount + element.discount);
+                
+            });
+            setTotal(40 + price )
+        }
         amountSummery();
     }, [carts, removeFromCart])
     

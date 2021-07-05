@@ -6,9 +6,7 @@ import ProductList from "./features/productList/ProductList"
 import CartList from "./features/cartList/CartList"
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Redirect,
 } from "react-router-dom";
 
 function App() {
