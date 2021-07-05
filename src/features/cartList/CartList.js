@@ -20,7 +20,7 @@ export default function CartList({carts, removeFromCart}) {
             setTotal(40 + price )
         }
         amountSummery();
-    }, [carts, removeFromCart])
+    }, [carts, price, discount, total,removeFromCart])
     
     return (
         <div className="cart-container">
